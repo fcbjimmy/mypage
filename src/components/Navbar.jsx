@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import navbarcss from "./Navbar.module.css";
+import navbarcss from "./Navbar.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { useWindowSize } from "../hooks/useWindowSize";
 
 const Navbar = () => {
@@ -23,15 +23,27 @@ const Navbar = () => {
 
   return (
     <div className={navbarcss.navbar}>
-      <div className={navbarcss.leftside}>
+      <div className={navbarcss.rightside}>
         <div className={`${isMobile ? navbarcss.hidden : navbarcss.links}`}>
           <a href="#">Home</a>
           <a href="#">Projects</a>
           <a href="#">Contact</a>
         </div>
-        <div className={navbarcss.icon}>
-          <AiOutlineMenu onClick={() => setIsMobile(!isMobile)} />
-        </div>
+      </div>
+      <div className={navbarcss.icon}>
+        {isMobile ? (
+          <AiOutlineClose
+            className={navbarcss.burgermenu}
+            size="1.6rem"
+            onClick={() => setIsMobile(!isMobile)}
+          />
+        ) : (
+          <AiOutlineMenu
+            className={navbarcss.burgermenu}
+            size="1.6rem"
+            onClick={() => setIsMobile(!isMobile)}
+          />
+        )}
       </div>
     </div>
   );

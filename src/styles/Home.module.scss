@@ -1,0 +1,168 @@
+@use "./variables" as mixin;
+
+.container {
+  color: mixin.$white;
+  background-color: mixin.$purple;
+  height: calc(150vh - 100px);
+  border: 1px solid red;
+  width: 100%;
+
+  .sectionone {
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+  }
+
+  h2 {
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  h1 {
+    color: mixin.$lilac;
+    font-size: 1rem;
+  }
+
+  .photo {
+    clip-path: circle();
+    width: 18rem;
+    height: auto;
+    margin-left: 4rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+    transform: translate(120px, -80px);
+  }
+
+  .skills {
+    color: mixin.$white;
+    border: 1px solid red;
+    width: mixin.$homewidth;
+    margin: mixin.$homemargin;
+
+    h2 {
+      margin-top: 1rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    .logos {
+      display: flex;
+      border: 1px solid red;
+      max-width: 30rem;
+      height: 10rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.logo {
+  margin: 0 1rem;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .html {
+    color: mixin.$htmlorange;
+  }
+  .css {
+    color: mixin.$cssblue;
+  }
+  .js {
+    color: mixin.$yellow;
+  }
+  .react {
+    color: mixin.$reactblue;
+  }
+}
+
+@include mixin.tabletLarge() {
+  .container {
+    h2 {
+      font-size: 2.4rem;
+    }
+    h1 {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .container {
+    .sectionone {
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .photo {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    .item:nth-child(1) {
+      border: 1px solid yellow;
+    }
+    .item:nth-child(2) {
+      border: 1px solid yellow;
+
+      .icons {
+        border: 1px solid yellow;
+        transform: translate(50px, -80px);
+      }
+    }
+  }
+}
+
+@include mixin.phone() {
+  .container {
+    h2 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// .container .sectionone {
+//   display: flex;
+//   margin: 0 auto;
+//   width: calc(100vw - 20rem);
+//   height: calc(100vh - 100px);
+// }
+
+// .sectionone h2 {
+//   margin-top: 13rem;
+//   margin-bottom: 2rem;
+//   font-size: 3rem;
+// }
+
+// .sectionone {
+// }
+
+// .photo {
+//   left: 20%;
+//   clip-path: circle();
+//   scale: 80%;
+//   margin-left: 8rem;
+// }

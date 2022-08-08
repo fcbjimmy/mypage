@@ -1,0 +1,50 @@
+// Colors
+$purple: #232946;
+$lilac: #b8c1ec;
+$red: red;
+$white: #fffffe;
+$yellow: #f7df1d;
+$cssblue: #33a8dd;
+$htmlorange: #e44d25;
+$reactblue: #61dbfb;
+
+//viewport
+$homewidth: calc(100vw - 20rem);
+$homemargin: 0 auto;
+
+//logos function
+
+@mixin logoTitle($color) {
+  color: $color;
+  margin: 1rem 5rem;
+}
+@mixin logoStyle($color) {
+  margin: 0 5rem;
+  color: $color;
+}
+
+//media queries
+
+$breakpoints: (
+  "sm": 570px,
+  "md": 768px,
+  "l": 948px,
+);
+
+@mixin tabletLarge() {
+  @media (max-width: map-get($breakpoints, "l")) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
