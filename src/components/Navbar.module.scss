@@ -2,20 +2,55 @@
 
 .navbar {
   width: 100%;
-  height: 7rem;
   background-color: mixin.$purple;
+  min-height: 7rem;
   font-weight: bold;
   display: flex;
 }
 
 .rightside {
-  display: flex;
-  flex: 100%;
-  justify-content: flex-end;
-  align-items: center;
-
   margin: mixin.$homemargin;
   max-width: mixin.$homewidth;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  transform: translate(-40px, 0px);
+  height: auto;
+  color: white;
+}
+
+.burgermenu:hover {
+  cursor: pointer;
+  box-shadow: 0 0 6px black;
+}
+
+.burgermenu:active {
+  transition: 0.05s;
+  transform: translateY(2px) scale(1.3);
+}
+
+.links {
+  display: none;
+}
+
+.hidden {
+  background-color: mixin.$purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.hidden a {
+  text-decoration: none;
+  margin: 0.5rem;
+  color: mixin.$white;
+}
+
+.hidden a:hover {
+  text-decoration: underline;
 }
 
 .links a {
@@ -25,102 +60,75 @@
   font-size: 1.1rem;
 }
 
-.links a:hover {
-  text-decoration: underline;
-}
-
-// .leftside {
-//   flex: 50%;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-//   margin-right: 1.25rem;
-// }
-
-// .leftside input {
-//   height: 1.4rem;
-//   border: none;
-//   border-radius: 0.2rem;
-//   font-size: 0.8rem;
-// }
-
-// .leftside button {
-//   height: 1.5rem;
-//   border: 0.1rem solid black;
-//   border-radius: 0.2rem;
-//   padding: 0.2rem 0.3rem;
-// }
-
-button:hover {
-  box-shadow: 0 0 5px black;
-  cursor: pointer;
-}
-
-.icon {
-  display: none;
-}
-
-/* @media (max-width: 550px) {
-  .links a {
-    font-size: 0.9rem;
+@include mixin.largerThanPhone() {
+  .navbar {
+    // border: 1px solid red;
   }
-} */
+  .rightside {
+    display: flex;
+    flex: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    // border: 1px solid red;
+    max-width: 85rem;
+  }
+  .burgermenu {
+    display: none;
+  }
+  .links {
+    display: flex;
+    // border: 1px solid blue;
+    margin-right: 3rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .hidden a {
+    display: none;
+  }
+}
 
 @include mixin.tablet() {
   .links a {
     text-decoration: none;
     color: mixin.$white;
-    color: red;
     margin-left: 2rem;
     font-size: 1.1rem;
   }
 
-  .rightside {
-    justify-content: center;
-  }
-}
-
-@include mixin.phone() {
-  .icon {
-    display: flex;
-    align-items: center;
-    transform: translate(-40px, 0px);
-    height: auto;
-    color: white;
-  }
-
-  .burgermenu:hover {
-    cursor: pointer;
-    box-shadow: 0 0 6px black;
-  }
-
-  .burgermenu:active {
-    transition: 0.05s;
-    transform: translateY(2px) scale(1.3);
-  }
-
-  .links {
-    display: none;
-  }
-
-  .hidden {
-    position: absolute;
-    height: auto;
-    width: 20rem;
-    background-color: mixin.$purple;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .hidden a {
-    text-decoration: none;
-    margin: 0.5rem;
-    color: mixin.$white;
-  }
-
-  .hidden a:hover {
+  .links a:hover {
     text-decoration: underline;
+  }
+
+  // .leftside {
+  //   flex: 50%;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  //   margin-right: 1.25rem;
+  // }
+
+  // .leftside input {
+  //   height: 1.4rem;
+  //   border: none;
+  //   border-radius: 0.2rem;
+  //   font-size: 0.8rem;
+  // }
+
+  // .leftside button {
+  //   height: 1.5rem;
+  //   border: 0.1rem solid black;
+  //   border-radius: 0.2rem;
+  //   padding: 0.2rem 0.3rem;
+  // }
+
+  button:hover {
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+  }
+
+  .icon {
+    display: none;
   }
 }

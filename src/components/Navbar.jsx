@@ -12,14 +12,14 @@ const Navbar = () => {
   console.log(width);
 
   useEffect(() => {
-    if (width < 570 && isMobile) {
+    if (width <= 570 && isMobile) {
       setIsMobile(true);
     }
-    if (width >= 570) {
+    if (width > 570) {
       setIsMobile(false);
     }
   }, [width]);
-  console.log({ isMobile });
+  console.log(isMobile);
 
   return (
     <div className={navbarcss.navbar}>

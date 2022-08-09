@@ -1,0 +1,15 @@
+@use "../styles/variables" as mixin;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: mixin.$purple;
+  min-height: 8rem;
+  width: 100%;
+  color: mixin.$white;
+  p {
+    margin: 2rem auto;
+  }
+}
