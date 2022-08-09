@@ -3,14 +3,13 @@
 .container {
   color: mixin.$white;
   background-color: mixin.$purple;
-  height: calc(150vh - 100px);
-  border: 1px solid red;
-  width: 100%;
+  min-height: calc(150vh - 100px);
+  // border: 1px solid red;
 
   .sectionone {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 
   h2 {
@@ -26,7 +25,7 @@
 
   .photo {
     clip-path: circle();
-    width: 18rem;
+    max-width: 18rem;
     height: auto;
     margin-left: 4rem;
   }
@@ -34,14 +33,12 @@
   .icons {
     display: flex;
     justify-content: space-between;
-    width: 12rem;
+    max-width: 12rem;
     transform: translate(120px, -80px);
   }
 
   .skills {
     color: mixin.$white;
-    border: 1px solid red;
-    width: mixin.$homewidth;
     margin: mixin.$homemargin;
 
     h2 {
@@ -53,9 +50,8 @@
 
     .logos {
       display: flex;
-      border: 1px solid red;
       max-width: 30rem;
-      height: 10rem;
+      min-height: 10rem;
       margin: 0 auto;
     }
   }
@@ -118,13 +114,13 @@
     }
 
     .item:nth-child(1) {
-      border: 1px solid yellow;
+      // border: 1px solid yellow;
     }
     .item:nth-child(2) {
-      border: 1px solid yellow;
+      // border: 1px solid yellow;
 
       .icons {
-        border: 1px solid yellow;
+        // border: 1px solid yellow;
         transform: translate(50px, -80px);
       }
     }

@@ -6,6 +6,7 @@ import { BsGithub } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { SiHtml5, SiJavascript, SiCss3, SiReact } from "react-icons/si";
 import Logos from "../components/Logos";
+import { LogoList } from "../helpers/LogoList";
 
 const Home = () => {
   return (
@@ -30,22 +31,16 @@ const Home = () => {
       <section className={styles.skills}>
         <h2>Skills</h2>
         <div className={styles.logos}>
-          <div className={styles.logo}>
-            <p>HTML</p>
-            <SiHtml5 size="5rem" className={styles.html} />
-          </div>
-          <div className={styles.logo}>
-            <p>CSS</p>
-            <SiCss3 size="5rem" className={styles.css} />
-          </div>
-          <div className={styles.logo}>
-            <p>JavaScript</p>
-            <SiJavascript size="5rem" className={styles.js} />
-          </div>
-          <div className={styles.logo}>
-            <p>React</p>
-            <SiReact size="5rem" className={styles.react} />
-          </div>
+          {LogoList.map((elem, index) => {
+            return (
+              <Logos
+                key={index}
+                title={elem.title}
+                logo={elem.logo}
+                color={elem.class}
+              />
+            );
+          })}
         </div>
       </section>
     </div>

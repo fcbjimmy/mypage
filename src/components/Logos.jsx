@@ -1,23 +1,22 @@
 import React from "react";
-import { AiFillHtml5 } from "react-icons/ai";
-import { SiJavascript, SiCss3, SiReact } from "react-icons/si";
+import { SiJavascript, SiCss3, SiReact, SiHtml5 } from "react-icons/si";
+import { LogoList } from "../helpers/LogoList";
+import styles from "../styles/Home.module.scss";
 
-const Logos = () => {
-  const logo = [
-    { title: "HTML", logo: <AiFillHtml5 /> },
-    { title: "CSS", logo: <SiCss3 /> },
-    { title: "Javascript", logo: <SiJavascript /> },
-    { title: "React", logo: <SiReact /> },
-  ];
+const Logos = ({ title, logo, color }) => {
+  // const logo = [
+  //   { title: "HTML", logo: <AiFillHtml5 /> },
+  //   { title: "CSS", logo: <SiCss3 /> },
+  //   { title: "Javascript", logo: <SiJavascript /> },
+  //   { title: "React", logo: <SiReact /> },
+  // ];
+
+  console.log(color);
 
   return (
-    <div>
-      {logo.map((elem, index) => {
-        <div key={index}>
-          <p>{elem.title}</p>
-          <div>{elem.logo}</div>
-        </div>;
-      })}
+    <div className={styles.logo}>
+      <p>{title}</p>
+      <span className={styles[color]}>{logo}</span>
     </div>
   );
 };
