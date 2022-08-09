@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import navbarcss from "./Navbar.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
@@ -25,9 +26,9 @@ const Navbar = () => {
     <div className={navbarcss.navbar}>
       <div className={navbarcss.rightside}>
         <div className={`${isMobile ? navbarcss.hidden : navbarcss.links}`}>
-          <a href="#">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
       <div className={navbarcss.icon}>

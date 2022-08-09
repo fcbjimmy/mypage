@@ -1,9 +1,5 @@
 import styles from "../styles/Home.module.scss";
 import img from "../assets/Screenshot 2022-08-08 at 12.40.59 AM.png";
-import { GrLinkedin } from "react-icons/gr";
-import { BsGithub } from "react-icons/bs";
-import { FiMail } from "react-icons/fi";
-import { SiHtml5, SiJavascript, SiCss3, SiReact } from "react-icons/si";
 import Logos from "../components/Logos";
 import Svg from "../components/Svg";
 import { LogoList } from "../helpers/LogoList";

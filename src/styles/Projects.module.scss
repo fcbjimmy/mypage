@@ -1,0 +1,7 @@
+@use "./variables" as mixin;
+
+.container {
+  color: mixin.$white;
+  background-color: mixin.$purple;
+  min-height: calc(150vh - 100px);
+}
