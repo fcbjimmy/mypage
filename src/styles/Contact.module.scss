@@ -1,0 +1,33 @@
+@use "./variables" as mixin;
+
+.container {
+  background-color: mixin.$purple;
+  color: mixin.$white;
+  height: 100%;
+  width: 100%;
+  border: 1px solid blue;
+}
+.body {
+  margin: 1rem auto;
+  border: 1px solid orange;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border: 1px solid yellow;
+}
+
+.right {
+}
+
+@include mixin.tablet() {
+  .body {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 50rem;
+    margin: 1rem auto;
+  }
+}
