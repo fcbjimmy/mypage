@@ -12,8 +12,12 @@ $reactblue: #61dbfb;
 $homewidth: calc(100vw - 20rem);
 $homemargin: 0 auto;
 
-//logos function
+$portfolio: url(../assets/Portfolio.png);
+$superm: url(../assets/superM.png);
+$todo: url(../assets/ToDo.png);
+$auth: url(../assets/Authentication.png);
 
+//function
 @mixin logoTitle($color) {
   color: $color;
   margin: 1rem 5rem;
@@ -21,6 +25,15 @@ $homemargin: 0 auto;
 @mixin logoStyle($color) {
   margin: 0 5rem;
   color: $color;
+}
+
+@mixin cardBg($background) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 12.5rem;
+  background-image: $background;
 }
 
 //media queries

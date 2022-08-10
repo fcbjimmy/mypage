@@ -26,9 +26,15 @@ const Navbar = () => {
     <div className={navbarcss.navbar}>
       <div className={navbarcss.rightside}>
         <div className={`${isMobile ? navbarcss.hidden : navbarcss.links}`}>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
+          <Link onClick={() => setIsMobile(false)} to="/">
+            Home
+          </Link>
+          <Link onClick={() => setIsMobile(false)} to="/projects">
+            Projects
+          </Link>
+          <Link onClick={() => setIsMobile(false)} to="/contact">
+            Contact
+          </Link>
         </div>
       </div>
       <div className={navbarcss.icon}>

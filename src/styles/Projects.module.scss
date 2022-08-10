@@ -1,7 +1,31 @@
 @use "./variables" as mixin;
 
 .container {
-  color: mixin.$white;
-  background-color: mixin.$purple;
-  min-height: calc(150vh - 100px);
+  color: mixin.$purple;
+  background-color: #b8c1ec;
+  height: 100%;
+  // min-height: calc(160vh - 100px);
+  border: 1px solid transparent;
+}
+
+@include mixin.largerThanPhone() {
+  .container {
+    min-height: calc(100vh - 100px);
+  }
+
+  .test {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include mixin.tablet() {
+  .test {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    min-height: 50rem;
+    margin: 0 auto;
+  }
 }

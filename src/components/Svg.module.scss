@@ -1,9 +1,15 @@
+@use "../styles/variables" as mixin;
+
 .home {
   display: flex;
   justify-content: space-evenly;
   margin: 2rem auto;
   svg {
     cursor: pointer;
+    color: mixin.$white;
+  }
+  svg:hover {
+    color: mixin.$white;
   }
 }
 
@@ -14,5 +20,9 @@
   svg {
     margin: 1rem 2rem 0 2rem;
     cursor: pointer;
+    color: mixin.$white;
+  }
+  svg:hover {
+    color: mixin.$white;
   }
 }
