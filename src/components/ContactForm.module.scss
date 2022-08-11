@@ -2,5 +2,43 @@
 
 .form {
   width: 100%;
-  border: 2px solid red;
+  min-height: 15rem;
+  background-color: mixin.$white;
+
+  h1 {
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    color: mixin.$purple;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    color: mixin.$purple;
+    font-weight: bold;
+
+    input {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.4rem;
+      outline: none;
+      border: 2px solid mixin.$purple;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 8rem;
+      font-size: 1rem;
+      padding: 0.4rem;
+      color: mixin.$purple;
+      background-color: mixin.$white;
+      outline: none;
+      border: 2px solid mixin.$purple;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  }
 }

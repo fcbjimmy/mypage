@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import navbarcss from "./Navbar.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { useWindowSize } from "../hooks/useWindowSize";
+import ThemeContext from "../context/ThemeContext";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  // ${navbarcss.links}
   const width = useWindowSize();
-  console.log(width);
+  const { projectClass } = useContext(ThemeContext);
 
   useEffect(() => {
     if (width <= 570 && isMobile) {
@@ -23,9 +23,17 @@ const Navbar = () => {
   console.log(isMobile);
 
   return (
-    <div className={navbarcss.navbar}>
+    <div className={projectClass ? navbarcss.transparent : navbarcss.navbar}>
       <div className={navbarcss.rightside}>
-        <div className={`${isMobile ? navbarcss.hidden : navbarcss.links}`}>
+        <div
+          className={`${
+            isMobile
+              ? projectClass
+                ? navbarcss.trans
+                : navbarcss.hidden
+              : navbarcss.links
+          }`}
+        >
           <Link onClick={() => setIsMobile(false)} to="/">
             Home
           </Link>

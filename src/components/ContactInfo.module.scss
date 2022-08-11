@@ -3,13 +3,13 @@
 .card {
   background-color: mixin.$purple;
   color: mixin.$white;
-  min-width: 20rem;
+  max-width: 20rem;
   min-height: 2.5rem;
   border-radius: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 1rem auto;
+  margin: auto 0;
 }
 
 .icon {

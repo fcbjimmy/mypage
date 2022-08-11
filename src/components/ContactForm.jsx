@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import styles from "./ContactForm.module.scss";
 
 const ContactForm = () => {
@@ -9,43 +10,37 @@ const ContactForm = () => {
     <form>
       <div className={styles.form}>
         <h1>Send Message</h1>
-        <div>
-          <label htmlFor="name">
-            Name:
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
+        <div className={styles.group}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
-        <div>
-          <label htmlFor="email">
-            Email:
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
+        <div className={styles.group}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
-        <div className="form-group">
-          <label htmlFor="message">
-            Message:
-            <textarea
-              type="text"
-              id="message"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </label>
+        <div className={styles.group}>
+          <label htmlFor="message">Message</label>
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </div>
-        <button type="submit">Send</button>
+        <Button type="submit">Send</Button>
       </div>
     </form>
   );
