@@ -4,7 +4,13 @@ import styles from "./ContactForm.module.scss";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [focus, setFocus] = useState(false);
   const form = useRef();
+
+  const handleFocus = () => {
+    setFocus(true);
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -36,7 +42,16 @@ const ContactForm = () => {
         </div>
         <div className={styles.group}>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required={true}
+            onBlur={handleFocus}
+            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
+            focus={focus.toString()}
+          />
+          <span>Please input a valid email address</span>
         </div>
         <div className={styles.group}>
           <label htmlFor="message">Message</label>

@@ -19,6 +19,17 @@
     color: mixin.$purple;
     font-weight: bold;
 
+    span {
+      color: red;
+      padding: 0.2rem;
+      font-size: 0.8rem;
+      display: none;
+    }
+
+    input:invalid[focus="true"] ~ span {
+      display: block;
+    }
+
     input {
       width: 100%;
       font-size: 1rem;
