@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styles from "../styles/Contact.module.scss";
 import ContactInfo from "../components/ContactInfo";
 import ContactForm from "../components/ContactForm";
@@ -9,12 +9,14 @@ import { useLocation } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 
 const Contact = () => {
-  const { currentPath, setProjectClass } = useContext(ThemeContext);
+  const { projectClass, setProjectClass } = useContext(ThemeContext);
   const location = useLocation();
 
-  if (location.pathname === "/contact") {
-    setProjectClass(true);
-  }
+  useEffect(() => {
+    if (location.pathname === "/contact") {
+      setProjectClass(true);
+    }
+  }, [projectClass]);
 
   return (
     <>

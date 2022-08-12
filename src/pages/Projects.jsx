@@ -6,7 +6,7 @@ import { ProjectList } from "../helpers/ProjectList";
 import ThemeContext from "../context/ThemeContext";
 import Navbar from "../components/Navbar";
 const Projects = () => {
-  const { currentPath, setProjectClass } = useContext(ThemeContext);
+  const { setProjectClass } = useContext(ThemeContext);
   const location = useLocation();
 
   if (location.pathname === "/projects") {

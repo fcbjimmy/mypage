@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./styles/global.scss";
 import Navbar from "./components/Navbar";
@@ -18,8 +18,6 @@ function App() {
   //     setProjectClass(false);
   //   }
   // };
-
-  console.log(projectClass);
 
   return (
     <ThemeContext.Provider value={{ projectClass, setProjectClass }}>
