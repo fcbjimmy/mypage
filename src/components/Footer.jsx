@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <Svg icons={"footer"} />
-      <p> &copy; 2022 testing.hello</p>
+      <p> &copy; 2022 Jimmy Chan</p>
     </div>
   );
 };

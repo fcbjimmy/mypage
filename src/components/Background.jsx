@@ -4,11 +4,6 @@ import { Parallax } from "react-parallax";
 import hongkong from "../assets/HK.jpg";
 
 const Background = () => {
-  // <section className={styles.background}>
-  //
-  //
-  // </section>
-
   return (
     <>
       <Parallax

@@ -7,6 +7,8 @@ import ThemeContext from "../context/ThemeContext";
 import { useLocation } from "react-router-dom";
 import img from "../assets/profile.png";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
+
 const Home = () => {
   const { setProjectClass } = useContext(ThemeContext);
   const location = useLocation();
@@ -28,13 +30,19 @@ const Home = () => {
             </h1>
           </div>
           <div className={styles.item}>
-            <img
-              src={img}
-              className={styles.photo}
-              width="250"
-              height="250"
-              alt="Jimmy"
-            />
+            <motion.div
+              initial={{ y: "50%", opacity: 0, scale: 0.5 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <img
+                src={img}
+                className={styles.photo}
+                width="250"
+                height="250"
+                alt="Jimmy"
+              />
+            </motion.div>
             <Svg icons={"home"} />
           </div>
         </section>

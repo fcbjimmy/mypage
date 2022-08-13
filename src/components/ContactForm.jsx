@@ -1,15 +1,26 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import styles from "./ContactForm.module.scss";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const [focus, setFocus] = useState(false);
-  const form = useRef();
+  const [message, setMessage] = useState(false);
 
-  const handleFocus = () => {
-    setFocus(true);
-  };
+  useEffect(() => {
+    let timer = null;
+    if (message) {
+      timer = setTimeout(() => {
+        console.log("its running");
+        setMessage(!message);
+      }, 5000);
+    }
+    return () => {
+      console.log("cleanup");
+      clearTimeout(timer);
+    };
+  }, [message]);
+
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,14 +28,17 @@ const ContactForm = () => {
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
-        "12324",
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
+          console.log(result);
           console.log(form.current);
+          setMessage(true);
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -42,16 +56,7 @@ const ContactForm = () => {
         </div>
         <div className={styles.group}>
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required={true}
-            onBlur={handleFocus}
-            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
-            focus={focus.toString()}
-          />
-          <span>Please input a valid email address</span>
+          <input type="email" id="email" name="email" required />
         </div>
         <div className={styles.group}>
           <label htmlFor="message">Message</label>
@@ -60,6 +65,11 @@ const ContactForm = () => {
         <div className={styles.but}>
           <Button type="submit">Send</Button>
         </div>
+        {message && (
+          <div className={styles.success}>
+            <span>Message has been sent</span>
+          </div>
+        )}
       </div>
     </form>
   );
