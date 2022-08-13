@@ -29,8 +29,8 @@
 .icon {
   display: flex;
   align-items: center;
-  transform: translate(-40px, 0px);
-  height: auto;
+  justify-content: flex-end;
+  margin-right: 1.9rem;
   color: mixin.$white;
 }
 
@@ -95,7 +95,6 @@
     justify-content: flex-end;
     align-items: center;
     margin: 0 auto;
-    // border: 1px solid red;
     max-width: 85rem;
   }
   .burgermenu {
@@ -103,7 +102,6 @@
   }
   .links {
     display: flex;
-    // border: 1px solid blue;
     margin-right: 3rem;
   }
   .hidden {

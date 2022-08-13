@@ -13,15 +13,13 @@
 }
 
 .left {
-  display: flex;
-  flex-direction: column;
-  width: 23rem;
+  width: 70%;
   min-height: 12rem;
   margin: 1rem auto;
 }
 
 .right {
-  width: 23rem;
+  width: 70%;
   margin: 1rem auto;
 }
 
@@ -31,5 +29,10 @@
     justify-content: flex-start;
     max-width: 50rem;
     margin: 1rem auto;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
   }
 }
