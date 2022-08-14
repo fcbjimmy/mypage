@@ -10,7 +10,7 @@ const Background = () => {
         className={styles.bgimage}
         bgImage={hongkong}
         bgImageAlt="hong kong"
-        strength={450}
+        strength={400}
       >
         <div className={styles.content}>
           <h1>Get in touch</h1>
