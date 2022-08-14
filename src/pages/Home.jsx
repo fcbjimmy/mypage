@@ -23,7 +23,7 @@ const Home = () => {
       <div className={styles.container}>
         <section className={styles.sectionone}>
           <div className={styles.item}>
-            <h2>Hi, my name is Jimmy</h2>
+            <h2>Hello, my name is Jimmy</h2>
             <h1>
               I am an aspiring web developer with passion to learn and build web
               applications
