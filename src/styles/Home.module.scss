@@ -27,7 +27,7 @@
 
   .photo {
     clip-path: circle();
-    margin: 2rem auto;
+
     object-fit: cover;
     overflow: hidden;
   }
@@ -79,40 +79,12 @@
   }
 }
 
-@include mixin.tablet() {
-  .container {
-    .sectionone {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 65rem;
-    }
-    h2 {
-      text-align: left;
-      // margin-top: 4rem;
-      margin-left: 1rem;
-    }
-    h1 {
-      font-size: 1rem;
-      text-align: left;
-      margin-left: 1rem;
-    }
-
-    .icon {
-      margin-right: 1rem;
-    }
-  }
-}
-
 @include mixin.largerThanPhone() {
   .container {
     min-height: calc(150vh - 100px);
-    // border: 1px solid red;
 
     .sectionone {
       justify-content: center;
-      // border: 1px solid red;
       padding-top: 6rem;
     }
 
@@ -126,7 +98,7 @@
   }
 
   .photo {
-    margin: auto auto auto auto;
+    margin: 0rem 2rem auto auto;
   }
 
   .icons {
@@ -134,8 +106,10 @@
     justify-content: space-between;
   }
 
+  .item img {
+    margin: auto;
+  }
   .item:nth-child(1) {
-    // border: 1px solid yellow;
     align-self: start;
   }
 
@@ -144,6 +118,31 @@
       display: flex;
       max-width: 30rem;
       min-height: 10rem;
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .container {
+    .sectionone {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 65rem;
+    }
+    h2 {
+      text-align: left;
+      margin-left: 1rem;
+    }
+    h1 {
+      font-size: 1rem;
+      text-align: left;
+      margin-left: 1rem;
+    }
+
+    .icon {
+      margin-right: 1rem;
     }
   }
 }
