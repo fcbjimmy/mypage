@@ -20,7 +20,6 @@ const Navbar = () => {
       setIsMobile(false);
     }
   }, [width]);
-  console.log(isMobile);
 
   return (
     <div className={projectClass ? navbarcss.transparent : navbarcss.navbar}>

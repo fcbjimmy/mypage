@@ -10,12 +10,10 @@ const ContactForm = () => {
     let timer = null;
     if (message) {
       timer = setTimeout(() => {
-        console.log("its running");
         setMessage(!message);
       }, 5000);
     }
     return () => {
-      console.log("cleanup");
       clearTimeout(timer);
     };
   }, [message]);
@@ -34,9 +32,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log(result);
-          console.log(form.current);
           setMessage(true);
           form.current.reset();
         },
