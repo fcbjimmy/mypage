@@ -12,7 +12,6 @@ const Background = () => {
         bgImageAlt="hong kong"
         strength={800}
       >
-        <Navbar />
         <div className={styles.content}>
           <h1>Get in touch</h1>
         </div>
