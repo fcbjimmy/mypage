@@ -8,7 +8,7 @@ const Svg = ({ icons }) => {
   return (
     <div className={styles[icons]}>
       <a
-        href="https://www.linkedin.com/in/jimmy-chan-lam-cheung-029b71187/"
+        href="https://www.linkedin.com/in/jimmychan11/"
         target="_blank"
         rel="noreferrer"
       >
