@@ -5,6 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { useWindowSize } from "../hooks/useWindowSize";
 import ThemeContext from "../context/ThemeContext";
+import logo from "../assets/Jc.png";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -23,6 +24,9 @@ const Navbar = () => {
 
   return (
     <div className={contactClass ? navbarcss.transparent : navbarcss.navbar}>
+      <Link to="/">
+        <img src={logo} alt="logo" className={navbarcss.logo} />
+      </Link>
       <div className={navbarcss.rightside}>
         <div
           className={`${
@@ -33,15 +37,9 @@ const Navbar = () => {
               : navbarcss.links
           }`}
         >
-          <Link onClick={() => setIsMobile(false)} to="/">
-            Home
-          </Link>
-          <Link onClick={() => setIsMobile(false)} to="/projects">
-            Projects
-          </Link>
-          <Link onClick={() => setIsMobile(false)} to="/contact">
-            Contact
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
       <div className={navbarcss.icon}>

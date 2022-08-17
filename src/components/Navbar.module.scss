@@ -1,5 +1,7 @@
 @use "../styles/variables" as mixin;
+
 .navbar {
+  position: relative;
   width: 100%;
   background-color: mixin.$purple;
   min-height: 7rem;
@@ -11,6 +13,7 @@
 }
 
 .transparent {
+  position: relative;
   width: 100%;
   background-color: transparent;
   min-height: 7rem;
@@ -18,6 +21,17 @@
   display: flex;
   position: fixed;
   top: 0;
+  z-index: 1;
+}
+
+.logo {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.2rem;
   z-index: 1;
 }
 
@@ -98,6 +112,7 @@
     margin: 0 auto;
     max-width: 85rem;
   }
+
   .burgermenu {
     display: none;
   }
