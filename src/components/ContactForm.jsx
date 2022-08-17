@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [message, setMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   useEffect(() => {
     let timer = null;
@@ -16,7 +17,7 @@ const ContactForm = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [message]);
+  }, [message, errorMessage]);
 
   const form = useRef();
 
@@ -37,6 +38,7 @@ const ContactForm = () => {
         },
         (error) => {
           console.log(error.text);
+          setErrorMessage(true);
         }
       );
   };
@@ -63,6 +65,11 @@ const ContactForm = () => {
         {message && (
           <div className={styles.success}>
             <span>Message has been sent</span>
+          </div>
+        )}
+        {errorMessage && (
+          <div className={styles.fail}>
+            <span>Failed to send. Please try again</span>
           </div>
         )}
       </div>

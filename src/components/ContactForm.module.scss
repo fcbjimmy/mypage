@@ -64,6 +64,14 @@
     transition: 0.3s;
     animation: buttons 0.3s linear;
   }
+  .fail {
+    display: block;
+    color: mixin.$red;
+    text-align: center;
+    padding: 0.5rem 0;
+    transition: 0.3s;
+    animation: buttons 0.3s linear;
+  }
 }
 
 @keyframes buttons {
