@@ -10,7 +10,7 @@ const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const width = useWindowSize();
-  const { projectClass } = useContext(ThemeContext);
+  const { contactClass } = useContext(ThemeContext);
 
   useEffect(() => {
     if (width <= 570 && isMobile) {
@@ -22,12 +22,12 @@ const Navbar = () => {
   }, [width]);
 
   return (
-    <div className={projectClass ? navbarcss.transparent : navbarcss.navbar}>
+    <div className={contactClass ? navbarcss.transparent : navbarcss.navbar}>
       <div className={navbarcss.rightside}>
         <div
           className={`${
             isMobile
-              ? projectClass
+              ? contactClass
                 ? navbarcss.trans
                 : navbarcss.hidden
               : navbarcss.links

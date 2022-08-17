@@ -9,11 +9,11 @@ import ThemeContext from "./context/ThemeContext";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-  const [projectClass, setProjectClass] = useState(false);
+  const [contactClass, setContactClass] = useState(false);
   const location = useLocation();
 
   return (
-    <ThemeContext.Provider value={{ projectClass, setProjectClass }}>
+    <ThemeContext.Provider value={{ contactClass, setContactClass }}>
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />

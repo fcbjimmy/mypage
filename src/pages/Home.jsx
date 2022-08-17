@@ -10,11 +10,11 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const { setProjectClass } = useContext(ThemeContext);
+  const { setContactClass } = useContext(ThemeContext);
   const location = useLocation();
 
   if (location.pathname === "/") {
-    setProjectClass(false);
+    setContactClass(false);
   }
 
   return (

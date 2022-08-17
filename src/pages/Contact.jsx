@@ -9,14 +9,15 @@ import { useLocation } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 
 const Contact = () => {
-  const { projectClass, setProjectClass } = useContext(ThemeContext);
+  const { contactClass, setContactClass } = useContext(ThemeContext);
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (location.pathname === "/contact") {
-      setProjectClass(true);
+      setContactClass(true);
     }
-  }, [projectClass]);
+  }, [contactClass, location.pathname]);
 
   return (
     <>
