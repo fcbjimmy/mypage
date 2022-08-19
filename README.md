@@ -6,6 +6,10 @@ Contact form uses emailJS library. The keys from emailJs library should be input
 
 https://jimmychan.netlify.app/
 
+Technologies used:
+
+Javascript HTML CSS Modules React Sass
+
 ## Run in the local
 
 ```bash
