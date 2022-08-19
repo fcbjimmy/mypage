@@ -8,7 +8,7 @@ https://jimmychan.netlify.app/
 
 Technologies used:
 
-Javascript HTML CSS Modules React Sass
+JavaScript HTML CSS Modules React Sass
 
 ## Run in the local
 
