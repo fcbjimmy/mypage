@@ -29,7 +29,7 @@ const Contact = () => {
             <ContactInfo icon={<MdLocationOn />} text="Hong Kong" />
             <ContactInfo
               icon={<HiOutlineIdentification />}
-              text="Hong Kong Permanent Resident"
+              text="Permanent Resident"
             />
           </div>
           <div className={styles.right}>
