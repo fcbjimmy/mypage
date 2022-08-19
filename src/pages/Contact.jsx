@@ -4,7 +4,7 @@ import ContactInfo from "../components/ContactInfo";
 import ContactForm from "../components/ContactForm";
 import Background from "../components/Background";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { AiOutlineMobile } from "react-icons/ai";
+import { HiOutlineIdentification } from "react-icons/hi";
 import { useLocation } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 
@@ -26,8 +26,11 @@ const Contact = () => {
         <div className={styles.body}>
           <div className={styles.left}>
             <ContactInfo icon={<MdEmail />} text="jim.culers@gmail.com" />
-            <ContactInfo icon={<AiOutlineMobile />} text="6625-7711" />
             <ContactInfo icon={<MdLocationOn />} text="Hong Kong" />
+            <ContactInfo
+              icon={<HiOutlineIdentification />}
+              text="Hong Kong Permanent Resident"
+            />
           </div>
           <div className={styles.right}>
             <ContactForm />
