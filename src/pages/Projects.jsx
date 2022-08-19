@@ -22,9 +22,10 @@ const Projects = () => {
             return (
               <ProjectCard
                 key={indx}
+                id={indx}
                 name={elem.name}
                 title={elem.title}
-                technologies={elem.Technologies}
+                technologies={elem.technologies}
                 link={elem.link}
               />
             );

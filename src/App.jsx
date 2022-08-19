@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./styles/global.scss";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import ProjectDisplay from "./pages/ProjectDisplay";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import ThemeContext from "./context/ThemeContext";
@@ -18,6 +19,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDisplay />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
