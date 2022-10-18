@@ -1,8 +1,8 @@
 import styles from "./Card.module.scss";
 import { useNavigate } from "react-router-dom";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
-const ProjectCard = ({ id, name, title, technologies, link }) => {
+const ProjectCard = ({ id, name, title, technologies, link, live }) => {
   const navigate = useNavigate();
   return (
     <div className={styles.card}>
@@ -17,14 +17,21 @@ const ProjectCard = ({ id, name, title, technologies, link }) => {
         {technologies.map((elem, indx) => {
           return (
             <div className={styles.description} key={indx}>
-              <p>{elem}</p>
+              <p className={styles.descrip}>{elem}</p>
             </div>
           );
         })}
       </div>
-      <a href={link} target="_blank" rel="noreferrer">
-        <BsGithub className={styles.gitIcon} />
-      </a>
+      <div className={styles.icons}>
+        <a href={link} target="_blank" rel="noreferrer">
+          <BsGithub className={styles.gitIcon} />
+        </a>
+        {live && (
+          <a href={live} target="_blank" rel="noreferrer">
+            <BsLink45Deg className={styles.gitIcon} />
+          </a>
+        )}
+      </div>
     </div>
   );
 };

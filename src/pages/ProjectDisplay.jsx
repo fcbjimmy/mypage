@@ -7,7 +7,7 @@ import styles from "../styles/ProjectDisplay.module.scss";
 const ProjectDisplay = () => {
   const { id } = useParams();
   const project = ProjectList[id];
-  console.log(project);
+
   return (
     <>
       <Navbar />

@@ -2,7 +2,7 @@
 
 .card {
   width: 24rem;
-  max-height: 22rem;
+  min-height: 23rem;
   box-shadow: 0 0 10px black;
   transition: 0.5s;
   animation: ease-in-out;
@@ -27,6 +27,14 @@
     @include mixin.cardBg(mixin.$auth);
   }
 
+  .crypto {
+    @include mixin.cardBg(mixin.$crypto);
+  }
+
+  .job {
+    @include mixin.cardBg(mixin.$job);
+  }
+
   .title {
     text-align: center;
     font-weight: bold;
@@ -36,7 +44,8 @@
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
     border: none;
     width: auto;
     padding: 0 0.2rem;
@@ -46,8 +55,7 @@
     color: mixin.$white;
     border-radius: 2px;
 
-    p {
-      font-style: italic;
+    .descrip {
       padding: 0.3rem 0.15rem 0.3rem 0;
     }
   }
@@ -56,6 +64,12 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .gitIcon {

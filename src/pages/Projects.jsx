@@ -27,6 +27,7 @@ const Projects = () => {
                 title={elem.title}
                 technologies={elem.technologies}
                 link={elem.link}
+                live={elem.live}
               />
             );
           })}
