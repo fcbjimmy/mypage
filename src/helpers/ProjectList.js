@@ -25,7 +25,7 @@ export const ProjectList = [
   {
     title: "Crypto Tracker",
     name: "crypto",
-    technologies: ["React JS", "TypeScript", "SASS", "CoinGecko API"],
+    technologies: ["React JS", "TypeScript", "SCSS", "CoinGecko API"],
     link: "https://github.com/fcbjimmy/react-crypto",
     live: "https://crypto-react.onrender.com",
     screenshots: [
@@ -36,7 +36,7 @@ export const ProjectList = [
   {
     title: "Portfolio",
     name: "portfolio",
-    technologies: ["React JS", "CSS Modules", "SCSS"],
+    technologies: ["React JS", "SCSS"],
     link: "https://github.com/fcbjimmy/mypage",
     live: "https://jimmychan.netlify.app/",
     screenshots: [
@@ -47,7 +47,7 @@ export const ProjectList = [
   {
     title: "superM",
     name: "superm",
-    technologies: ["React JS", "Redux Toolkit", "React Router"],
+    technologies: ["React JS", "Redux Toolkit"],
     link: "https://github.com/fcbjimmy/superM",
     live: "",
     screenshots: [
