@@ -35,6 +35,10 @@
     @include mixin.cardBg(mixin.$job);
   }
 
+  .zero {
+    @include mixin.cardBg(mixin.$zero);
+  }
+
   .title {
     text-align: center;
     font-weight: bold;

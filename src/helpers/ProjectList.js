@@ -15,14 +15,14 @@ import zero2 from "../assets/zero-2.png";
 
 export const ProjectList = [
   {
-    title: "SBHK Shops",
-    name: "zerowaste",
-    technologies: ["React TS", "Tailwind CSS", "PostgresSQL", "Express.js"],
+    title: "Zero Waste Stores",
+    name: "zero",
+    technologies: ["React TS", "Tailwind", "PostgresSQL", "Express.js"],
     link: "https://github.com/fcbjimmy/zerowaste-client",
-    live: "https://zerowaste-client.onrender.com/",
+    live: "https://zerowaste-client.onrender.com/allshops/",
     screenshots: [
-      { img: zero1, alt: "image-one" },
-      { img: zero2, alt: "image-two" },
+      { img: zero1, alt: "/" },
+      { img: zero2, alt: "/" },
     ],
   },
   {
@@ -32,8 +32,8 @@ export const ProjectList = [
     link: "https://github.com/fcbjimmy/jobtracker-frontend",
     live: "https://jobtracker-frontend.onrender.com/",
     screenshots: [
-      { img: job1, alt: "image-one" },
-      { img: job2, alt: "image-two" },
+      { img: job1, alt: "/" },
+      { img: job2, alt: "/" },
     ],
   },
   {
