@@ -10,7 +10,21 @@ import crypto1 from "../assets/crypto-1.png";
 import crypto2 from "../assets/ crypto-2.png";
 import job1 from "../assets/job-1.png";
 import job2 from "../assets/job-2.png";
+import zero1 from "../assets/zero-1.png";
+import zero2 from "../assets/zero-2.png";
+
 export const ProjectList = [
+  {
+    title: "Zero Waste Stores",
+    name: "zerowaste",
+    technologies: ["React TS", "Tailwind CSS", "PostgresSQL", "Express.js"],
+    link: "https://github.com/fcbjimmy/zerowaste-client",
+    live: "https://zerowaste-client.onrender.com/",
+    screenshots: [
+      { img: zero1, alt: "image-one" },
+      { img: zero2, alt: "image-two" },
+    ],
+  },
   {
     title: "Job Tracker",
     name: "job",
