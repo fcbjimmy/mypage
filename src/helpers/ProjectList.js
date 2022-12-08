@@ -15,7 +15,7 @@ import zero2 from "../assets/zero-2.png";
 
 export const ProjectList = [
   {
-    title: "Zero Waste Stores",
+    title: "SBHK Shops",
     name: "zerowaste",
     technologies: ["React TS", "Tailwind CSS", "PostgresSQL", "Express.js"],
     link: "https://github.com/fcbjimmy/zerowaste-client",
