@@ -19,7 +19,7 @@ export const ProjectList = [
     name: "zero",
     technologies: ["React TS", "Tailwind", "PostgresSQL", "Express.js"],
     link: "https://github.com/fcbjimmy/zerowaste-client",
-    live: "https://zerowaste-client.onrender.com/allshops/",
+    live: "https://zerowaste-client.onrender.com/",
     screenshots: [
       { img: zero1, alt: "/" },
       { img: zero2, alt: "/" },
